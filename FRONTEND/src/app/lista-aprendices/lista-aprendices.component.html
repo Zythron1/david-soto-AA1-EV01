@@ -1,0 +1,16 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Ficha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let aprendiz of aprendices">
+            <td>{{ aprendiz.nombre }}</td>
+            <td>{{ aprendiz.apellido }}</td>
+            <td>{{ aprendiz.ficha }}</td>
+        </tr>
+    </tbody>
+</table>
