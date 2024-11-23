@@ -7,10 +7,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let aprendiz of aprendices">
-            <td>{{ aprendiz.nombre }}</td>
-            <td>{{ aprendiz.apellido }}</td>
-            <td>{{ aprendiz.ficha }}</td>
+        <tr *ngFor="let aprendiz of aprendices | paginate:{itemsPerPage:5, currentPage:p}">
+            <td [innerHTML]="mostrarDatos(aprendiz.nombre)"></td>
+            <td [innerHTML]="mostrarDatos(aprendiz.apellido)"></td>
+            <td [innerHTML]="mostrarDatos(aprendiz.ficha)"></td>
         </tr>
     </tbody>
 </table>
+
+<pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>

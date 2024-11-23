@@ -49,5 +49,5 @@ app.get('/aprendices', async (req, res) => {
 
 // Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${port}`);
+    console.log(`La aplicación se está ejecutando en el puerto ${port}`);
 });

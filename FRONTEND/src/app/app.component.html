@@ -1,2 +1,5 @@
 <app-primer-component></app-primer-component>
-<app-lista-aprendices [aprendices]="aprendices"></app-lista-aprendices>
+<app-lista-aprendices [aprendices]="aprendicesFiltrados" [mostrarDatos]="mostrarDatos.bind(this)"></app-lista-aprendices>
+<app-buscador (buscar)="filtrarAprendices($event)"></app-buscador>
+
+
